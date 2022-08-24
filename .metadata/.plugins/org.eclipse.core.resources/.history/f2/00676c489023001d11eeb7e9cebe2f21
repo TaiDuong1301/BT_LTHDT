@@ -1,0 +1,52 @@
+package bai03;
+
+public class Cylinder {
+	private int banKinh;
+	private int chieuCao;
+	
+	public int getBanKinh() {
+		return banKinh;
+	}
+	/**
+	 * get & set
+	 */
+	public void setBanKinh(int banKinh) {
+		this.banKinh = banKinh;
+	}
+	public int getChieuCao() {
+		return chieuCao;
+	}
+	public void setChieuCao(int chieuCao) {
+		this.chieuCao = chieuCao;
+	}
+	/**
+	 * Constructor default
+	 */
+	public Cylinder() {
+		super();
+	}
+	/**
+	 * Constructor
+	 * @param banKinh
+	 * @param chieuCao
+	 */
+	public Cylinder(int banKinh, int chieuCao) {
+		super();
+		this.banKinh = banKinh;
+		this.chieuCao = chieuCao;
+	}
+	/**
+	 * Method
+	 */
+	public double dienTichXungQuanh() {
+		return 2 * Math.PI * banKinh * chieuCao;
+	}
+	public double dienTichToanPhan() {
+		//Stp = 2πr^2 + 2πrh = 2πr(r+h)
+		return 2 * Math.PI * banKinh * (banKinh + chieuCao);
+	}
+	public double theTich() {
+		//V=πr²h
+		return Math.PI * banKinh * banKinh * chieuCao;
+	}
+}

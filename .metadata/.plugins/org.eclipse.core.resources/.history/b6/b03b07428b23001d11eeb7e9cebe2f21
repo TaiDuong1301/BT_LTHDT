@@ -1,0 +1,21 @@
+package bai02;
+
+public class Point {
+	private String ten;
+	private int x;
+	private int y;
+	private int z;
+	/**
+	 * Constructor
+	 */
+	public Point() {
+		super();
+	}
+	
+	@Override
+	public String toString() {
+		return ten + "(" + x + ", " + y + ", " + z + ")";
+	}
+	
+	
+}

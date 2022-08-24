@@ -1,0 +1,9 @@
+package bai04;
+
+public class DemoDiemSinhVien {
+	public static void main(String[] args) {
+		DiemSinhVien sv = new DiemSinhVien(1, "Nguyen Van A", 8, 9);
+		
+		System.out.println(String.format("%6s %20s %6s %6s %6s", "MSSV", "Ho ten", "Diem LT", "Diem TH", "Diem TB"));
+	}
+}

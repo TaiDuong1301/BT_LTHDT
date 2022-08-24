@@ -1,0 +1,9 @@
+package bai04;
+
+public class DiemSinhVien {
+	private int maSV;
+	private String hoTen;
+	private float diemLT, diemTH;
+	
+	
+}

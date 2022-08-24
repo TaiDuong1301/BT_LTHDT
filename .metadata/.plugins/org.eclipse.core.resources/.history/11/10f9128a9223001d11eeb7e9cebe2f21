@@ -1,0 +1,50 @@
+package bai04;
+
+public class DiemSinhVien {
+	private int maSV;
+	private String hoTen;
+	private float diemLT;
+	private float diemTH;
+	public DiemSinhVien() {
+		// TODO Auto-generated constructor stub
+		this(0, "", 0, 0);
+	}
+	public DiemSinhVien(int maSV, String hoTen, float diemLT, float diemTH) {
+		super();
+		this.maSV = maSV < 0 ? 0 : maSV;
+		this.hoTen = hoTen.compareTo("") == 0 ? "xxx" : hoTen;
+		this.diemLT = diemLT;
+		this.diemTH = diemTH;
+	}
+	public int getMaSV() {
+		return maSV;
+	}
+	public void setMaSV(int maSV) {
+		if (maSV > 0)
+			this.maSV = maSV;
+		else
+			this.maSV = 0;
+	}
+	public String getHoTen() {
+		return hoTen;
+	}
+	public void setHoTen(String hoTen) throws Exception{
+		if (!hoTen.equals(""))
+			this.hoTen = hoTen;
+			
+	}
+	public float getDiemLT() {
+		return diemLT;
+	}
+	public void setDiemLT(float diemLT) {
+		this.diemLT = diemLT;
+	}
+	public float getDiemTH() {
+		return diemTH;
+	}
+	public void setDiemTH(float diemTH) {
+		this.diemTH = diemTH;
+	}
+	
+	
+}
