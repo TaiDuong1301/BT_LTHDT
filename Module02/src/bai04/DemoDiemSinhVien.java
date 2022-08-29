@@ -16,17 +16,14 @@ public class DemoDiemSinhVien {
 		Scanner sc = new Scanner(System.in);
 		int masv = sc.nextInt();
 		System.out.println("Nhap ho va ten cua sinh vien sv3: ");
-		sc = new Scanner(System.in);
+		sc.nextLine();
 		String hoten = sc.nextLine();
 		System.out.println("Nhap diem ly thuyt sinh vien sv3: ");
-		sc = new Scanner(System.in);
 		float diemlt = sc.nextFloat();
 		System.out.println("Nhap diem thuc hanh cua sinh vien sv3: ");
-		sc = new Scanner(System.in);
 		float diemth = sc.nextFloat();
 		
 		sv3 = new DiemSinhVien(masv, hoten, diemlt, diemth);
-		
 		
 		System.out.println(String.format("%6s %-20s %10s %10s %10s", "MSSV", "Ho ten", "Diem LT", "Diem TH", "Diem TB"));
 		System.out.println(sv1);
