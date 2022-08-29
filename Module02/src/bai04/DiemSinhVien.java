@@ -6,7 +6,6 @@ public class DiemSinhVien {
 	private float diemLT;
 	private float diemTH;
 	public DiemSinhVien() {
-		// TODO Auto-generated constructor stub
 		this(0, "", 0, 0);
 	}
 	public DiemSinhVien(int maSV, String hoTen, float diemLT, float diemTH) {

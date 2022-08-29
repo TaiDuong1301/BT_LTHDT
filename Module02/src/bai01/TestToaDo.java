@@ -3,7 +3,6 @@ package bai01;
 public class TestToaDo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ToaDo td1 = new ToaDo();
 		ToaDo td2 = new ToaDo("B", 3, 4);
 		
