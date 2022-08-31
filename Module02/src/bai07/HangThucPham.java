@@ -5,20 +5,47 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class HangThucPham {
-    private String maHang;
+    private final String maHang;
     private String tenHang;
-    private int donGia;
+    private double donGia;
     private LocalDate NSX;
     private LocalDate NHH;
-    public String getMaHang() {
-        return maHang;
-    }
-    public void setMaHang(String maHang) throws Exception {
+    /**
+     * Constructor
+     * @param maHang
+     * @param tenHang
+     * @param donGia
+     * @param nSX
+     * @param nHH
+     */
+    public HangThucPham(String maHang) throws Exception{
         if (!maHang.equals("")) {
             this.maHang = maHang;
         }
         else
-            throw new Exception("Error: Empty Ma Hang");
+            throw new Exception("Ma hang bi rong!");
+        this.setTenHang("xxx");
+        this.setDonGia((double) 0);
+        this.setNSX(LocalDate.now());
+        this.setNHH(NSX);
+    }
+    public HangThucPham(String maHang, String tenHang, Double donGia, LocalDate nSX, LocalDate nHH) throws Exception{
+        if (!maHang.equals("")) {
+            this.maHang = maHang;
+        }
+        else
+            throw new Exception("Ma hang bi rong!");
+        setTenHang(tenHang);
+        setDonGia(donGia);
+        setNSX(nSX);
+        setNHH(nHH);
+    }
+    /**
+     * Get Ma hang
+     * @return
+     */
+    public String getMaHang() {
+        return maHang;
     }
     public String getTenHang() {
         return tenHang;
@@ -29,10 +56,10 @@ public class HangThucPham {
         else
             this.tenHang = "xxx";
     }
-    public int getDonGia() {
+    public double getDonGia() {
         return donGia;
     }
-    public void setDonGia(int donGia) {
+    public void setDonGia(Double donGia) {
         this.donGia = donGia < 0 ? 0 : donGia;
     }
     public LocalDate getNSX() {
@@ -52,36 +79,6 @@ public class HangThucPham {
             NHH = nHH;
         else
             NHH = NSX;
-    }
-    /**
-     * Constructor
-     * @param maHang
-     * @param tenHang
-     * @param donGia
-     * @param nSX
-     * @param nHH
-     */
-    public HangThucPham(String maHang, String tenHang, int donGia, LocalDate nSX, LocalDate nHH) {
-        try {
-            setMaHang(maHang);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        setTenHang(tenHang);
-        setDonGia(donGia);
-        setNSX(nSX);
-        setNHH(nHH);
-    }
-    public HangThucPham(String maHang) {
-        try {
-            setMaHang(maHang);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        tenHang = "xxx";
-        donGia = 0;
-        NSX = LocalDate.now();
-        NHH = NSX;
     }
     public boolean hetHan() {
         return NHH.isBefore(LocalDate.now()) ? true : false;
