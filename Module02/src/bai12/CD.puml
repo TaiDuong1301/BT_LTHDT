@@ -1,0 +1,22 @@
+@startuml CD
+    class CD{
+        -maCD : int
+        -tuaCD : String
+        -soBaiHat : int
+        -giaThanh : float
+        --
+        <<Constructor>>
+        +CD() : void 
+        +CD(int, String, int, float) : void
+        <<Property get>>
+        +getMaCD() : int 
+        +getTuaCD() : String
+        +getSoBaiHat() : int
+        +getGiaThanh() : float
+        <<Property set>>
+        +setMaCD(int) : void
+        +setTuaCD(String) : void
+        +setSoBaiHat(int) : void
+        +setGiaThanh(int) : void
+    }
+@enduml
