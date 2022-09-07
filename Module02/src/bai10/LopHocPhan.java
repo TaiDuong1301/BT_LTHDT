@@ -21,7 +21,47 @@ public class LopHocPhan {
         this.tenLHP = tenLHP;
         this.tenGV = tenGV;
         this.thongTinLopHoc = thongTinLopHoc;
-        this.dsSV = new Sinhvien[4];
+        this.dsSV = new SinhVien[4];
+    }
+    //Getter
+    public String getMaLHP() {
+        return maLHP;
+    }
+
+    public String getTenLHP() {
+        return tenLHP;
+    }
+
+    public String getTenGV() {
+        return tenGV;
+    }
+
+    public String getThongTinLopHoc() {
+        return thongTinLopHoc;
+    }
+
+    public SinhVien[] getDsSV() {
+        return dsSV;
+    }
+    // Setter
+    public void setMaLHP(String maLHP) {
+        this.maLHP = maLHP;
+    }
+
+    public void setTenLHP(String tenLHP) {
+        this.tenLHP = tenLHP;
+    }
+
+    public void setTenGV(String tenGV) {
+        this.tenGV = tenGV;
+    }
+
+    public void setThongTinLopHoc(String thongTinLopHoc) {
+        this.thongTinLopHoc = thongTinLopHoc;
+    }
+
+    public void setDsSV(SinhVien[] dsSV) {
+        this.dsSV = dsSV;
     }
 
     
