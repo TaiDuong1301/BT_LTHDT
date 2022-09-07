@@ -17,14 +17,14 @@ public class Account {
         balance = 50000;
     }
     public Account(long accountNumber, String name, double balance) {
-        setAccountNumber(accountNumber);
-        setName(name);
-        setBalance(balance);
+        this.accountNumber = accountNumber > 0 ? accountNumber : 999999;
+        this.name = !name.equals("") ? name : "Chua xac dinh";
+        this.balance = balance > 50000 ? balance : 50000;
     }
     public Account(long accountNumber, String name) {
-        setAccountNumber(accountNumber);
-        setName(name);
-        setBalance(0);
+        this.accountNumber = accountNumber > 0 ? accountNumber : 999999;
+        this.name = !name.equals("") ? name : "Chua xac dinh";
+        balance = 50000;
     }
     /**
      * Getter & Setter
@@ -50,10 +50,7 @@ public class Account {
     public double getRATE() {
         return RATE;
     }
-    /**
-     * other Methods
-     */
-
+    // Other Method
     /**
      * Gửi tiền
      * @param amount
@@ -96,15 +93,16 @@ public class Account {
     public boolean transfer(Account acc, double amount) {
         if (balance - amount >= 0) {
             acc.balance += amount;
+            this.balance -= amount;
             return true;
         }
         return false;
     }
     @Override
     public String toString() {
-        Locale local = new Locale("en", "US");
+        Locale local = new Locale("vi", "VN");
         NumberFormat nf = NumberFormat.getCurrencyInstance(local);
-        return "Account [accountNumber=" + accountNumber + ", balance=" + nf.format(balance) + ", name=" + name + "]";
+        return "Account [accountNumber = " + accountNumber + ", name = " + name + ", balance = " + nf.format(balance) + "]";
     }
     
 }
