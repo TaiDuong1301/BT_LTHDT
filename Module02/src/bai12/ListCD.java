@@ -1,4 +1,4 @@
-package bai12_CD;
+package bai12;
 
 public class ListCD {
     public CD[] ls;
@@ -52,7 +52,7 @@ public class ListCD {
 
     public int findPosCDbyMaCD(String maCD) {
         for (int i = 0; i < ls.length; i++) {
-            if (ls[i].getMaCD().equalsIgnoreCase(maCD));
+            if (ls[i].getMaCD().equalsIgnoreCase(maCD))
                 return i;
         }
         return -1;
@@ -60,7 +60,7 @@ public class ListCD {
 
     public CD findCDbyMaCd(String maCD) {
         for (int i = 0; i < ls.length; i++) {
-            if (ls[i].getMaCD().equalsIgnoreCase(maCD));
+            if (ls[i].getMaCD().equalsIgnoreCase(maCD))
                 return ls[i];
         }
         return null;

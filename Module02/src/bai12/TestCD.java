@@ -1,4 +1,4 @@
-package bai12_CD;
+package bai12;
 
 import java.util.Scanner;
 

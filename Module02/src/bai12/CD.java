@@ -1,4 +1,4 @@
-package bai12_CD;
+package bai12;
 
 import java.text.NumberFormat;
 import java.util.Locale;
@@ -7,7 +7,7 @@ public class CD {
     private String maCD;
     private String tuaCD;
     private int soBaiHat;
-    private float giaThanh;
+    private double giaThanh;
     //Getter
     public String getMaCD() {
         return maCD;
@@ -18,7 +18,7 @@ public class CD {
     public int getSoBaiHat() {
         return soBaiHat;
     }
-    public float getGiaThanh() {
+    public double getGiaThanh() {
         return giaThanh;
     }
     //Setter
@@ -39,10 +39,10 @@ public class CD {
         } else
             throw new Exception("1");
     }
-    public void setGiaThanh(float giaThanh) {
+    public void setGiaThanh(double giaThanh) {
         this.giaThanh = giaThanh;
     }
-    public CD(String maCD, String tuaCD, int soBaiHat, float giaThanh) {
+    public CD(String maCD, String tuaCD, int soBaiHat, double giaThanh) {
         try {
             if (maCD != null) {
                 this.maCD = maCD;
