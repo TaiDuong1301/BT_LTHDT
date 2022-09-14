@@ -1,19 +1,21 @@
-package bai12;
+package bai12_CD;
 
-public class TestCD {
+public class DemoCD {
     public static void main(String[] args) {
-        ListCD ls = new ListCD(5);
-        CD cd1 = new CD("123", "Mua thu", 10, 122000);
-        CD cd2 = new CD("121", "Mua ha", 10, 123000);
-        CD cd3 = new CD("111", "Mua xuan", 10, 124000);
-        ls.addCD(cd1);
-        ls.addCD(cd2);
-        ls.addCD(cd3);
-        System.out.println("Ket qua");
-        ls.output();
+        CD cd1 = new CD("003", "Mua Xuan", 11, 120000);
+        CD cd2 = new CD("002", "Mua Ha", 22, 450000);
+        CD cd3 = new CD("001", "Mua Thu", 33, 30000);
 
-        ls.sort();
-        System.out.println("Ket qua");
-        ls.output();
+        int n = 3;
+        ListCD ls = new ListCD(n);
+        ls.themCD(cd1);
+        ls.themCD(cd2);
+        ls.themCD(cd3);
+        
+        ls.inKQ();
+
+        ls.sapXep();
+
+        ls.inKQ();
     }
 }
